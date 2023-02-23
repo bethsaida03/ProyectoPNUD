@@ -1,0 +1,23 @@
+{% load static %}
+<header>
+    <div class="logo-nombre">
+        <img src="{% static 'img/logo.png' %}" width="40" height="30">
+        <span class="textologo">Sweet Home</span>
+    </div>
+    <div class="opciones-menu">
+        <div class="ini">
+            <a class="inicio" href="#">Inicio</a>
+        </div>
+        <div class="prod">
+            <a class="producto" href="#">Productos</a>
+        </div>
+    </div>
+
+    <div class="contenedor-derecho">
+        <button>Carrito</button>
+        <div class="contenedor-sesiones">
+            <button class="inicio-sesion">Iniciar sesión</button>
+            <button class="registro">Registrarse</button>
+        </div>
+    </div>
+</header>

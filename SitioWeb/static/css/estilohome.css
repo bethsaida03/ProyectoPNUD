@@ -1,0 +1,440 @@
+body{
+    padding: 0%;
+    margin-top: 0%;
+}
+.cuerpo{
+  padding: 5%;
+    padding-top: 0%;
+    
+}
+/*Header*/
+  header{
+    border: 1px solid #5DF5F5;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    padding: 1% 0% 1% 0%;
+  }
+  .logo-nombre{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 5%;
+    font-weight: bold;
+  }
+  .logo-nombre img{
+    display: flex;
+    align-items: end;
+  }
+  .textologo{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    font-weight: bold;
+    font-size: 100%;
+  }
+.opciones-menu{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.ini{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  
+}
+.prod{
+  display: flex;
+  margin-left: 5%;
+  text-align: left;
+  align-items: center;
+  
+}
+.inicio{
+  text-decoration: none;
+  color: #00240F;
+}
+.producto{
+  text-decoration: none;
+  color: #00240F;
+}
+.inicio:hover{
+  border-bottom: 2px solid #5DF5F5;
+}
+.producto:hover{
+  border-bottom: 2px solid #5DF5F5;
+}
+.contenedor-derecho{
+  margin-right: 0%;
+  padding-right: 0%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+} 
+.contenedor-sesiones{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 3%;
+}
+.inicio-sesion{
+  background-color: #cecbcb;
+  border: #cecbcb;
+  padding: 2%;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 4%
+}
+.inicio-sesion:hover{
+  background-color: #5DF5F5;
+  border: #5DF5F5;
+}
+.registro{
+  background-color: #cecbcb;
+  border: #cecbcb;
+  padding: 2%;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 4%
+  
+}
+.registro:hover{
+  background-color: #5DF5F5;
+  border: #5DF5F5;
+}
+
+/*Slider*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  /* border-radius: 100%; */
+  user-select: none;
+  background-color: #5DF5F5;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  /* border-radius: 100%; */
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*buscar*/
+.h1 {
+ 
+    margin: 25px;
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+  }
+.barra-busqueda {
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    background: #cacaca;
+    padding: 0 20px;
+    border-radius: 100px;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    border-color: rgb(93, 245, 245);
+    display:flex; 
+    justify-content: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/**/
+.titulo-categoria{
+    margin-bottom: 5%;
+}
+.categorias{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.cartilla1{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.cartilla1-img{
+    display:flex; 
+    justify-content: center;
+}
+
+.cartilla2{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.cartilla2-img{
+    display:flex; 
+    justify-content: center;
+}
+
+.cartilla3{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.cartilla3-img{
+    display:flex; 
+    justify-content: center;
+}
+.cartilla4{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.cartilla4-img{
+    display:flex; 
+    justify-content: center;
+}
+.cartilla5{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.cartilla5-img{
+    display:flex; 
+    justify-content: center;
+}
+.cartilla6{
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+.cartilla6-img{
+    display:flex; 
+    justify-content: center;
+}
+.categoria-img{
+    width: 90%;
+}
+.titulo-productos{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/*GALERIA*/
+/*TERCERA SECCIÓN DEL CUERPO*/
+
+
+/*---------GALERIA------------*/
+#galeria{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 5% 0 5%;
+  row-gap: 25px;
+}
+#fila1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 25px;
+  
+}
+#fila2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 25px;
+}
+.cajaimg1{
+  text-decoration: none;
+  border: 1px solid #5DF5F5;
+  border-radius: 50px;
+}
+.cajaimg1:hover{
+  text-decoration: none;
+  border: 1px solid #000000;
+}
+.cajaimg2{
+  text-decoration: none;
+  border: 1px solid #5DF5F5;
+  border-radius: 50px;
+}
+.cajaimg2:hover{
+  text-decoration: none;
+  border: 1px solid #000000;
+}
+.cajaimg3{
+  text-decoration: none;
+  border: 1px solid #5DF5F5;
+  border-radius: 50px;
+}
+.cajaimg3:hover{
+  text-decoration: none;
+  border: 1px solid #000000;
+}
+.cajaimg4{
+  text-decoration: none;
+  border: 1px solid #5DF5F5;
+  border-radius: 50px;
+}
+.cajaimg4:hover{
+  text-decoration: none;
+  border: 1px solid #000000;
+}
+.contenedorimg{
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorimg img{
+  object-fit: cover;
+  width: 50%;
+  height: 50%;
+  
+  
+}
+.cuadroTexto{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  background: white;
+  margin: 10%;
+}
+.botonaddcarrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4%;
+}
+.add-carrito{
+  background-color: #5DF5F5;
+  border: #5DF5F5;
+  padding: 5%;
+  
+  margin-top: 10%;
+  margin-bottom: 5%;
+  font-weight: bold;
+  width: 70%;
+  border-radius: 50px; /*bordes redondos*/
+  
+}
+.descripcion{
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  
+}
+.precio{
+  font-size: 23px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+}
+/* Acerca de Sweet Home. */
+.contenedor{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-top: 5%;
+  }
+  .cuadro{
+    width: 60%;
+    background: #E0F4FB;
+    border: 1px solid #5DF5F5;
+    border-radius: 20px;
+    margin-top: 5%;
+  }
+  
+  
+  .titulo{
+    text-align: center;
+   font-family: 'Fira Sans';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 36px;
+   line-height: 74px;
+   color: #00240F;
+   width: 100%;
+   margin-bottom: 0%;
+  }
+  
+  
+  .parrafo{
+    display: flex;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    color: #333333;
+    width: 95%;
+    margin-left: 3%;
+  }

@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetHome</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/estilohome.css' %}">
+
+
+</head>
+
+<body>
+    {% include "./header.html" %}
+    <div class="cuerpo">
+    <!-- Slide contenedor -->
+    <div class="slideshow-container">
+
+        <!-- imagenes -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="{% static 'img/slider/Slide1.png' %}" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="{% static 'img/slider/Slide2.png' %}" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="{% static 'img/slider/Slide3.png' %}" style="width:100%">
+
+        </div>
+
+        <!-- Next y previous botones -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- circulos -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <h1 class="h1">¿Qué Producto buscas?</h1>
+    <form action="">
+        <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar...">
+    </form>
+
+    <div class="titulo-categoria">
+        <h2>Categorias</h2>
+    </div>
+    <div class="categorias">
+        <div class="cartilla1">
+            <div class="cartilla1-img">
+                <img src="{% static 'img/categorias/cocina.png' %}" class="categoria-img" alt="categoria cocina">
+            </div>
+            <span style="text-align: center;padding: 2%;">Cocina</span>
+        </div>
+        <div class="cartilla2">
+            <div class="cartilla2-img">
+                <img src="{% static 'img/categorias/baño.png' %}" class="categoria-img" alt="categoria baño">
+            </div>
+            <span style="text-align: center;padding: 2%;">Baño</span>
+        </div>
+        <div class="cartilla3">
+            <div class="cartilla3-img">
+                <img src="{% static 'img/categorias/serviciomesa.png' %}" class="categoria-img"
+                    alt="categoria servicio de mesa">
+            </div>
+            <span style="text-align: center;padding: 2%;">Servicio de mesa</span>
+        </div>
+        <div class="cartilla4">
+            <div class="cartilla4-img">
+                <img src="{% static 'img/categorias/decoracion.png' %}" class="categoria-img"
+                    alt="categoria decoracion">
+            </div>
+            <span style="text-align: center;padding: 2%;">Decoración</span>
+        </div>
+        <div class="cartilla5">
+            <div class="cartilla5-img">
+                <img src="{% static 'img/categorias/dormitorio.png' %}" class="categoria-img"
+                    alt="categoria dormitorio">
+            </div>
+            <span style="text-align: center;padding: 2%;">Dormitorio</span>
+        </div>
+        <div class="cartilla6">
+            <div class="cartilla6-img">
+                <img src="{% static 'img/categorias/organizacion.png' %}" class="categoria-img"
+                    alt="categoria organización">
+            </div>
+            <span style="text-align: center;padding: 2%;">Organización</span>
+        </div>
+    </div>
+    <div class="titulo-productos">
+        <h2>Productos Populares</h2>
+    </div>
+    <div id="terceraSeccion">
+        <div id="galeria">
+            <div id="fila1">
+                <a class="cajaimg1" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p1.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Set de toalla stylo Azul/Blanco</span>
+                        <span class="precio">$19.00</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="cajaimg2" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p2.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Cajonera Ratán Glamour Clip Café 4 Pisos</span>
+                        <span class="precio">$40.00</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="cajaimg3" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p3.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Armadores Infantil Stylo Rosado 10 Unidades</span>
+                        <span class="precio">$3.99</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="cajaimg4" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p4.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Olla Wok Tramontina Loreto 58 cm</span>
+                        <span class="precio">$15.99</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="fila2">
+                <a class="cajaimg1" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p5.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Jarra Primavera que abarca un litro</span>
+                        <span class="precio">$3.51</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="cajaimg2" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p6.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Juego de Cubiertos Tulum Rojo 24 piezas</span>
+                        <span class="precio">$16.99</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="cajaimg3" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p7.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Homesock Gris con Corazon 3D</span>
+                        <span class="precio">$8.99</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+                <a class="cajaimg4" href="URL">
+                    <div class="contenedorimg">
+                        <img src="{% static 'img/productos/p8.png' %}">
+                    </div>
+                    <div class="cuadroTexto">
+                        <span class="descripcion">Lampara de Tumbado Bambu Wave</span>
+                        <span class="precio">$85.00</span>
+                        <div class="botonaddcarrito">
+                            <button class="add-carrito">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="cuadro">
+            <h2 class="titulo">Acerca de Sweet Home</h2>
+            <div class="parrafo">
+                <p>En Sweet Home, queremos ser una de las 50 industrias más grandes del Ecuador,
+                    alcanzando la preferencia de los consumidores, clientes y profesionales,
+                    por la Innovación y Calidad reconocidas en nuestras marcas,
+                    así como por nuestra cultura orientada al bienestar y desarrollo de la gente. </p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
