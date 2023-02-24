@@ -492,19 +492,3 @@ form {
 }
 
 
-/* ---- image on row ----- */
-.Img {
-  width: 30%;
-  border-radius: 5px;
-  background: #000;
-  object-fit: cover;
-  overflow: hidden;
-}
-.BtnEliminar{
-  background-color:#5DF5F5;
-  border: #5DF5F5;
-  padding: 2%;
-  border-radius: 50px;
-  font-weight: bold;
-  margin-left: 4%
-}
