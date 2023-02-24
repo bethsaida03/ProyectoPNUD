@@ -1,6 +1,86 @@
 <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 
 {% load static %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++  with FlexBox  +++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<h4 class="m-3 "> Table with FlexBox </h4>
+<div class="table-flex">
+
+  <div class="tabel-thead">
+    <div class="td-img"> Image </div>
+    <div class="td"> Name </div>
+    <div class="td-flex">Price</div>
+    <div class="td-flex">Flex item</div>
+    <div class="td-last justify-content-center">Action</div>
+  </div>
+
+  <!-- ------- Here goes the loop -----  -->
+  <div class="table-tbody mt-2">
+    <div class="td-img">
+      <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+    </div>
+    <div class="td">Pancakes</div>
+    <div class="td-flex">5,00 €</div>
+    <div class="td-flex">Flex item</div>
+    <div class="td-last justify-content-end">
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++  with <table>  ++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+
+<h4 class="m-3 mt-5 pt-3 border-top"> Table with table tag</h4>
+
+<div class="table-content-table">
+  <table class="w-100">
+    
+  <tr class="table-thead-tr">
+    <th>Image</th>
+    <th>Name</th> 
+    <th>Price</th> 
+    <th class="th-actions">Actions</th>
+  </tr>
+    
+  <tr class="table-tbody-tr">
+    <td>
+      <img src="https://plus.unsplash.com/premium_photo-1667824282674-04285eef14d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU1fHhqUFI0aGxrQkdBfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">      
+    </td>
+    <td>Arroz de marisco</td>
+    <td>10,00 €</td>
+    <td>
+       <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+    </td>
+  </tr>
+    
+  <tr class="table-tbody-tr">
+    <td>
+      <img src="https://plus.unsplash.com/premium_photo-1667824282674-04285eef14d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU1fHhqUFI0aGxrQkdBfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+    </td>
+    <td>Arroz de pato</td>
+    <td>6,50 €</td>
+    <td>
+       <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+    </td>
+  </tr>
+   
+</table>
+</div>
+
+
 <div class="table-reponsive box">
     <table id="example" class="table table-striped table-bordered">
         <thead>
