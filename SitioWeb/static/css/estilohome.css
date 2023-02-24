@@ -493,56 +493,19 @@ form {
 
 
 /* ---- image on row ----- */
-img {
-  width: 80px;
-  height: 80px;
+Imagenes {
+  width: 200px;
+  height: 300px;
   border-radius: 5px;
   background: #000;
   object-fit: cover;
   overflow: hidden;
 }
-
-
-
-/* ++++++++++++++++++++++++++++++++++++++ */
-/* +++++++++++ with <table> +++++++++++++ */
-/* ++++++++++++++++++++++++++++++++++++++ */
-
-table {
-  border-collapse: unset !important;
-  border-spacing: 0px 10px;
-}
-
-.table-content-table {
-  margin: 20px;
-  padding: 0px 10px;
-  background: #F8F8F8;
-  border: 1px solid #F1F1F1;
-  border-radius: 5px;
-}
-
-.th-actions {
-  width: 300px; /* changes as needed */
-  text-align: center;
-}
-
-.table-thead-tr th {
-  color: #7D7D7D;
-  font-weight: normal;
-}
-
-.table-tbody-tr td {
-  background: #FFF; 
-  border: 1px solid #FFF;
-}
-
-.table-tbody-tr td:first-child {
-  border-radius: 5px 0 0 5px;
-  padding: 10px;
-  width: 130px;
-}
-.table-tbody-tr td:last-child {
-  border-radius: 0 5px 5px 0;
-  text-align: end;
-  padding: 10px;
+.BtnEliminar{
+  background-color:#5DF5F5;
+  border: #5DF5F5;
+  padding: 2%;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 4%
 }
