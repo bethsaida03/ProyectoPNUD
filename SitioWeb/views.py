@@ -9,3 +9,6 @@ from django.template import loader
 #     template_name = 'SitioWeb/home.html'
 def Home(request):
     return render(request, 'SitioWeb/home.html', {})
+
+def carrito(request):
+    return render(request, 'SitioWeb/carrito.html', {})
