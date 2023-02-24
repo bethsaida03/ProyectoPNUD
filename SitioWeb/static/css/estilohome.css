@@ -493,9 +493,8 @@ form {
 
 
 /* ---- image on row ----- */
-Imagenes {
-  width: 200px;
-  height: 300px;
+.Img {
+  width: 30%;
   border-radius: 5px;
   background: #000;
   object-fit: cover;
