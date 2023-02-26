@@ -15,3 +15,6 @@ def carrito(request):
 
 def registro(request):
     return render(request, 'SitioWeb/registro.html', {})
+
+def iniciosesion(request):
+    return render(request, 'SitioWeb/iniciosesion.html', {})
