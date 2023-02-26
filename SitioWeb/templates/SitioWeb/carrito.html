@@ -4,75 +4,82 @@
 <style>
     /* ---- image on row ----- */
 
-    .Imagenes{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0%;
-    padding-right: 0%;    
-}
-.TablaProductos{
-    align-items: center;
-    text-align: center;   
+    .Imagenes {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
 
-}
-.Img{
-    width: 10vh;
-    height: 11vh;
-    
-}
-.BtnEliminar{
-    
-    border-radius: 6px;
-    border-style: ridge;
-    background-color: aqua;
-    padding: 4%;
-    border: none;
-}
-.BtnProductos{
-    background-color: #18ABE3;
-    border-radius: 6px;
-    justify-content: center;
-    margin-bottom: 2%;
-    border-style: ridge;
-    padding: 0.5%;
-    border: none;
-}
+    .TablaProductos {
+        align-items: center;
+        text-align: center;
 
-.box{
-    width: 100%;
-    height: 230px;
-    margin: 10px;
-    box-sizing: border-box;
-    border-radius: 4px;  
+    }
 
-}
-.ContenedorG{
-    width: 80%;
-    height: auto;
-    justify-content: center;
-    margin-top: 10vh;
-    margin-left: 10%;
-    
-}
-.ContenedorPosterior{
-   height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.BtnCompra{
-    background-color: #18ABE3;
-    border-radius: 6px;
-    justify-content: center;
-    margin-bottom: 2%;
-    margin-left: 53%;
-    padding: 0.5%;
-    width: 20%;
-    border-style:none;
-    
-}
+    .Img {
+        width: 10vh;
+        height: 11vh;
+
+    }
+
+    .BtnEliminar {
+
+        border-radius: 6px;
+        border-style: ridge;
+        background-color: aqua;
+        padding: 4%;
+        border: none;
+    }
+
+    .BtnProductos {
+        background-color: #18ABE3;
+        border-radius: 6px;
+        justify-content: center;
+        margin-bottom: 2%;
+        border-style: ridge;
+        padding: 0.5%;
+        border: none;
+    }
+
+    .box {
+        width: 100%;
+        height: 230px;
+        margin: 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+
+    }
+
+    .ContenedorG {
+        width: 80%;
+        height: auto;
+        justify-content: center;
+        margin-top: 10vh;
+        margin-left: 10%;
+
+    }
+
+    .ContenedorPosterior {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .BtnCompra {
+        background-color: #18ABE3;
+        border-radius: 6px;
+        justify-content: center;
+        margin-bottom: 2%;
+        margin-left: 53%;
+        padding: 0.5%;
+        width: 20%;
+        border-style: none;
+
+    }
 </style>
 {% include "./header.html" %}
 <div class="table-reponsive box">
@@ -139,4 +146,3 @@
     <button type="button" class="BtnCompra" (click)="ContinuarC()">Continuar Compra</button>
 </div>
 {% include "./piedepagina.html" %}
-
