@@ -18,3 +18,6 @@ def registro(request):
 
 def iniciosesion(request):
     return render(request, 'SitioWeb/iniciosesion.html', {})
+
+def piedepagina(request):
+    return render(request, 'SitioWeb/piedepagina.html', {})
