@@ -1,4 +1,98 @@
 {% load static %}
+<style>
+    /*Header*/
+  header{
+    border: 1px solid #5DF5F5;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    padding: 1% 0% 1% 0%;
+  }
+  .logo-nombre{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 5%;
+    font-weight: bold;
+  }
+  .logo-nombre img{
+    display: flex;
+    align-items: end;
+  }
+  .textologo{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    font-weight: bold;
+    font-size: 100%;
+  }
+.opciones-menu{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.ini{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  
+}
+.prod{
+  display: flex;
+  margin-left: 5%;
+  text-align: left;
+  align-items: center;
+  
+}
+.inicio{
+  text-decoration: none;
+  color: #00240F;
+}
+.producto{
+  text-decoration: none;
+  color: #00240F;
+}
+.inicio:hover{
+  border-bottom: 2px solid #5DF5F5;
+}
+.producto:hover{
+  border-bottom: 2px solid #5DF5F5;
+}
+.contenedor-derecho{
+  margin-right: 0%;
+  padding-right: 0%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+} 
+.contenedor-sesiones{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 3%;
+}
+.inicio-sesion{
+  background-color: #cecbcb;
+  border: #cecbcb;
+  padding: 2%;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 4%
+}
+.inicio-sesion:hover{
+  background-color: #5DF5F5;
+  border: #5DF5F5;
+}
+.registro{
+  background-color: #cecbcb;
+  border: #cecbcb;
+  padding: 2%;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-left: 4%
+  
+}
+.registro:hover{
+  background-color: #5DF5F5;
+  border: #5DF5F5;
+}
+</style>
 <header>
     <div class="logo-nombre">
         <img src="{% static 'img/logo.png' %}" width="40" height="30">
