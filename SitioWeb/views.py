@@ -12,3 +12,6 @@ def Home(request):
 
 def carrito(request):
     return render(request, 'SitioWeb/carrito.html', {})
+
+def registro(request):
+    return render(request, 'SitioWeb/registro.html', {})
