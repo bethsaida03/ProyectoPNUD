@@ -1,93 +1,102 @@
 {% load static %}
 <style>
-    *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-   
-}
-body {
-    width: 100%;
-    height: 100vh;
-    background: #009FFF;  
-    background: -webkit-linear-gradient(to right, #f9f6f7, #f6f7f7); 
-    background: linear-gradient(to right, #fbfbfb, #fbfbfb);
-    font-family: 'Roboto', sans-serif;  
-}
-form{
-    position: absolute;
-    min-width: 280px;
-    max-width: 25%;
-    width: 25%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 15px;
-    box-shadow: 0 1rem 1rem  rgba(0, 0, 0, 0.3);
-    background-color: rgba(241, 238, 238, 0.966);
-    backdrop-filter: blur(1rem);
-    border-radius: 5px;
-    color: #0d0d0d;
-}
-h1{
-    position: relative;
-    font-size: 18px;
-    margin-bottom: 15px;
-    padding-bottom: 7px;
-}
-h1::after{
-    content: "";
-    position: absolute;
-    height: 3px;
-    border-radius: 3px;
-    background-color: #18a0d6;
-    width: 120px;
-    left: 0;
-    bottom: 0;    
-}
-input{
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 5px 6px;
-    margin-bottom: 15px;
-    border: none;
-    outline: none;
-    border-radius: 1px;
-}
+    .contenedor-registro {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
 
-.acuerdo{
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 15px;
-}
-button{
-    display: block;
-    margin: auto;
-    width: 100%;
-    height:40px ;
-    background-color:hsla(196, 70%, 45%, 0.752);
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    color: #fff;
-}
-.link{
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bolder;
-}
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background: #009FFF;
+        background: -webkit-linear-gradient(to right, #f9f6f7, #f6f7f7);
+        background: linear-gradient(to right, #fbfbfb, #fbfbfb);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    form {
+        position: absolute;
+        min-width: 280px;
+        max-width: 25%;
+        width: 25%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+        background-color: rgba(241, 238, 238, 0.966);
+        backdrop-filter: blur(1rem);
+        border-radius: 5px;
+        color: #0d0d0d;
+    }
+
+    h1 {
+        position: relative;
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-bottom: 7px;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        border-radius: 3px;
+        background-color: #18a0d6;
+        width: 120px;
+        left: 0;
+        bottom: 0;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 5px 6px;
+        margin-bottom: 15px;
+        border: none;
+        outline: none;
+        border-radius: 1px;
+    }
+
+    .acuerdo {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    button {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 40px;
+        background-color: hsla(196, 70%, 45%, 0.752);
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+    .link {
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bolder;
+    }
 </style>
 {% include "./header.html" %}
-<form action="">
-    <h1>Registro </h1>
-    <p class="user">Nombre de Usuario</p>
-    <input type="text" placeholder=" ">
-    <p class="email">Correo</p>
-    <input type="text" placeholder=" ">
-    <p class="cedula">Número de Cédula</p>
-    <input type="email" placeholder=" ">
-    <p class="contrasena">Contraseña</p>
-    <input type="password" placeholder=" ">
-    <button>Registrarse</button>
-</form>
+<div class="contenedor-registro">
+    <form action="">
+        <h1>Registro </h1>
+        <p class="user">Nombre de Usuario</p>
+        <input type="text" placeholder=" ">
+        <p class="email">Correo</p>
+        <input type="text" placeholder=" ">
+        <p class="cedula">Número de Cédula</p>
+        <input type="email" placeholder=" ">
+        <p class="contrasena">Contraseña</p>
+        <input type="password" placeholder=" ">
+        <button>Registrarse</button>
+    </form>
+</div>
