@@ -5,6 +5,7 @@
     crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
+
 <style>
     /* ---- image on row ----- */
 
@@ -121,13 +122,17 @@
         margin: 3% 5%;
     }
 </style>
+
 {% include "./header.html" %}
+
 <h2 class="titulo-principal-carrito">Carrito de compras</h2>
+
 <div class="titulo-secundario-carrito">
     <h2>Lista de productos</h2>
 </div>
+
 <div class="contenedortabla">
-    <table class="table">
+    <table class="table" style="border: 1px solid #80808066;">
         <thead>
             <tr>
                 <th scope="col">Imagen</th>
@@ -202,6 +207,6 @@
     </table>
 
 </div>
-<button type="button" class="BtnCompra" (click)="ContinuarC()">Continuar Compra</button>
+<button type="button" class="BtnCompra" (click)="ContinuarC()" style="margin-bottom: 5%;">Continuar Compra</button>
 </div>
 {% include "./piedepagina.html" %}
