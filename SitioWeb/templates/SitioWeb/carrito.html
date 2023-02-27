@@ -48,14 +48,14 @@
         border: none;
     }
 
-    /* .box {
-        width: 100%;
-        height: 230px;
-        margin: 10px;
+    .box {
         box-sizing: border-box;
         border-radius: 4px;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        margin: 5%;
 
-    } */
+    }
 
     .ContenedorG {
         width: 80%;
@@ -84,7 +84,18 @@
 
     }
 
-    .titulo-principal-carrito:hover {
+    .titulo-principal-carrito {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo-secundario-carrito {
+        width: 28%;
+        margin: 5% 2%;
+    }
+
+    .titulo-secundario-carrito:hover {
         border-bottom: 2px solid #5DF5F5;
     }
 
@@ -95,8 +106,9 @@
     }
 </style>
 {% include "./header.html" %}
-<div class="titulo-principal-carrito">
-    <h2>PLista de productos</h2>
+<h2 class="titulo-principal-carrito">Carrito de compras</h2>
+<div class="titulo-secundario-carrito">
+    <h2>Lista de productos</h2>
 </div>
 <table class="table">
     <thead>
@@ -149,10 +161,11 @@
             La tecnología SSL protege los datos vinculados a información personal y de pago.</p>
 
     </div>
-    <table class="table">
+    <table class="table" style="width: 65%;" >
         <thead>
             <tr>
                 <th scope="col">Total del carrito</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -170,7 +183,7 @@
             </tr>
         </tbody>
     </table>
-    
+
 </div>
 <button type="button" class="BtnCompra" (click)="ContinuarC()">Continuar Compra</button>
 </div>
