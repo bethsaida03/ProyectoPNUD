@@ -80,14 +80,41 @@
 </style>
 {% include "./header.html" %}
 <div class="contenedor-form-sesion">
-    <form action="">
-        <h1>Iniciar Sesión</h1>
-        <p class="usuario">Usuario:</p>
-        <input type="email" placeholder="Usuario">
-        <p class="contraseña">Contraseña:</p>
-        <input type="password" placeholder="Contraseña">
-        <button>Iniciar Sesion</button>
-        <!-- <p class="link"><a href="index.html">Olvidaste tu contraseña</a></p> -->
-    </form>
+    {% if msg %}
+              {{ msg | safe }}
+          {% else %}
+              Ingrese con su cedula y contraseña
+          {% endif %}
+          <form method="post" action="">
+
+            {% csrf_token %}
+            <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
+            <div class="input-group mb-3">
+               
+              {{ form.username }}
+             
+            </div>
+            <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            <div class="input-group mb-3">
+              {{ form.password }}
+              
+            </div>
+            <div class="row">
+              <div class="col-8">
+                
+              </div>
+              <!-- /.col -->
+              <div class="col-4">
+                <button type="submit" name="iniciosecion" class="btn btn-primary btn-block">Ingresar</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
 </div>
 {% include "./piedepagina.html" %}
