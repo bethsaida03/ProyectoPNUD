@@ -17,7 +17,7 @@ urlpatterns = [
     path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Dub"),
     path('limpiar/', limpiar_carrito, name="CLS"), 
-    path('Carrito_compra', views.Carrito_compra, name='Carrito_compra'),
+    
 ]
 
 if settings.DEBUG:
