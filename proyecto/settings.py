@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v0&7_d!)2^6#q-n)2f6mlpja8$8*(wyx_sdl$nyhh_a_s_p2*=
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 # Application definition
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'SitioWeb',
-    
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +52,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proyecto.urls'
+LOGIN_REDIRECT_URL = "home"   
+LOGOUT_REDIRECT_URL = "home" 
+LOGIN_URL = 'iniciosesion'
 
 TEMPLATES = [
     {
@@ -64,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'SitioWeb.context_processor.total_carrito',
             ],
         },
     },
@@ -105,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ec'
 
 TIME_ZONE = 'UTC'
 
@@ -124,3 +128,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "SitioWeb/static"),)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+MEDIA_URL = '/media/'
