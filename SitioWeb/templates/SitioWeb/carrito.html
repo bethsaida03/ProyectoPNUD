@@ -189,18 +189,19 @@
             </tr>
         </thead>
         <tbody>
+            {% for producto in productos   %}
+           
             <tr>
-                <td>Subtotal</td>
-                <td>$103.97</td>
+                <td> <img src="{{ producto.imagen.url}}"></td>
+                <td>{{producto.nombre}}</td>
+                <td>${{producto.valor}}</td>
+                <td>1</td>
+                <td>$21.99</td>
+                <td><button class="BtnEliminar">Eliminar</button></td>
             </tr>
-            <tr>
-                <td>Iva 12%</td>
-                <td>$12.48</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$116.45</td>
-            </tr>
+           
+            
+            {% endfor %}
         </tbody>
     </table>
 
