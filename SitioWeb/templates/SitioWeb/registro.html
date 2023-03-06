@@ -84,17 +84,62 @@
 </style>
 {% include "./header.html" %}
 <div class="contenedor-registro">
-    <form action="">
-        <h1>Registro </h1>
-        <p class="user">Nombre de Usuario</p>
-        <input type="text" placeholder=" ">
-        <p class="email">Correo</p>
-        <input type="text" placeholder=" ">
-        <p class="cedula">Número de Cédula</p>
-        <input type="email" placeholder=" ">
-        <p class="contrasena">Contraseña</p>
-        <input type="password" placeholder=" ">
-        <button>Registrarse</button>
-    </form>
+    {% if msg %}
+    <span class="text-danger">{{ msg | safe }}</span>
+{% else %}
+<span>
+  Ingrese sus datos 
+</span>
+{% endif %}  
+<form role="form" method="post" action="">
+
+    {% csrf_token %}
+    <div class="input-group mb-3">
+      {{ form.username }}
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <span class="fas fa-user"></span>
+        </div>
+      </div>
+
+      
+    </div>
+    <span class="text-error">{{ form.username.errors }}</span>
+
+
+    
+    
+   
+
+    
+    <div class="input-group mb-3">
+      {{ form.password1 }}
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <span class="fas fa-lock"></span>
+        </div>
+      </div>
+    </div>
+    <span class="text-error">{{ form.password1.errors }}</span>
+
+    <div class="input-group mb-3">
+      {{ form.password2 }}
+      <div class="input-group-append">
+        <div class="input-group-text">
+          <span class="fas fa-lock"></span>
+        </div>
+      </div>
+    </div>
+    <span class="text-error">{{ form.password2.errors }}</span>
+    
+    <div class="row">
+      
+      <!-- /.col -->
+      <div class="col-5">
+        <button type="submit" name="registro" class="btn btn-primary btn-block">Registrarse</button>
+      </div>
+      <!-- /.col -->
+    </div>
+  </form>
 </div>
 {% include "./piedepagina.html" %}
