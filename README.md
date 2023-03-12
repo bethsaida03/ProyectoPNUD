@@ -1,8 +1,10 @@
 # Proyecto-Catalogo
+
 Integrantes:
-Bethsaida Chea
-Mar Carabali
-Karen Mullo
+♦ Bethsaida Chea
+♦ Mar Carabali
+♦ Karen Mullo
+
 Descripción:
 Este sitio web constará de artículos tales como del hogar,una página de inicio para iniciar sesion y registro, el carrito de compras, un formulario para los pagos y el delivery.
 
@@ -11,3 +13,7 @@ https://www.figma.com/file/C3pbxXdndIkJaBhs6m5E8U/PROYECTO-PNUD?node-id=0%3A1&t=
 
 Link deTablero en Trello:
 https://trello.com/invite/b/KKtASwKP/ATTIf9b3f831d1beb7f5a9919f5219b1b64dF624BFC2/proyecto
+
+Link de la documentación:
+https://1drv.ms/b/s!ApIVNNMlrHuYph4pNAq3ItuA6nZA?e=v7gZIG
+
