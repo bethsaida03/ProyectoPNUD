@@ -27,9 +27,16 @@ def Home(request):
     return render(request, 'SitioWeb/home.html', {})
 
 def carrito(request):
-    productos = Producto.objects.all()
-    
-    return render(request, 'SitioWeb/carrito.html', {'productos':productos})
+    if request.user.is_authenticated:
+        usuario = request.user.usuario
+        orden, created =Orden.objects.get_or_create(usuario=usuario)
+        items = orden.ordenitem_set.all()
+    else:
+        items = []
+        orden = {'get_cart_total':0, 'get_cartitems':0 }
+
+    context={'items': items, 'orden':orden}
+    return render(request, 'SitioWeb/carrito.html', context)
 
 #--------------------------REGISTRO---------------------#
 def registro(request):
