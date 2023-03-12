@@ -130,6 +130,7 @@
 </div>
 
 <div class="contenedortabla">
+   
     <table class="table" style="border: 1px solid #80808066;">
         <thead>
             <tr>
@@ -142,14 +143,15 @@
             </tr>
         </thead>
         <tbody>
-            {% for producto in productos   %}
+            {% for item in items   %}
            
             <tr>
-                <td> <img src="{{ producto.imagen.url}}"></td>
-                <td>{{producto.nombre}}</td>
-                <td>${{producto.valor}}</td>
-                <td>1</td>
-                <td>$21.99</td>
+                <td> <img src="{{ item.producto.imagen.url}}"></td>
+                <td>{{item.producto.nombre}}</td>
+                <td>${{item.producto.valor|floatformat:2}}</td>
+                <td>{{item.cantidad}}</td>
+
+                <td>${{item.get_total}}</td>
                 <td><button class="BtnEliminar">Eliminar</button></td>
             </tr>
            
@@ -157,10 +159,11 @@
             {% endfor %}
         </tbody>
     </table>
+ 
 </div>
 
 <div class="add-products">
-    <button class="BtnProductos" (click)="masproductos()">Elegir más productos</button>
+    <button class="BtnProductos" (click)="producto">Elegir más productos</button>
 </div>
 
 <div class="ContenedorPosterior">
@@ -179,17 +182,14 @@
         </thead>
         <tbody>
             <tr>
-                <td>Subtotal</td>
-                <td>$103.97</td>
-            </tr>
-            <tr>
-                <td>Iva 12%</td>
-                <td>$12.48</td>
+                <td>Cantidad de productos</td>
+                <td>{{orden.get_cart_items}}</td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td>$116.45</td>
+                <td>{{orden.get_cart_total}}</td>
             </tr>
+            
         </tbody>
     </table>
 
