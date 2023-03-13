@@ -33,20 +33,21 @@
     <div id="terceraSeccion">
         <div id="galeria">
             <div id="fila1">
-                {% for producto in productos %}
+                {% for product in products %}
                 <div class="cajaimg1" >
                     <div class="contenedorimg">
-                        <img src="{{ producto.imagen.url}}">
+                        <img src="{{product.image.url}}">
                     </div>
                     <div class="cuadroTexto">
-                        <span class="descripcion">{{producto.nombre}}</span>
-                        <span class="descripcion">{{producto.descripcion}}</span>
-                        <span class="precio">${{producto.valor}}</span>
+                        <span class="descripcion">{{product.name}}</span>
+                        
+                        <span class="precio">$ {{ product.price|floatformat:2  }}</span>
                         <span >
                         <div class="botonaddcarrito">
-                            <a href="{% url 'Add' producto.id %}" class="add-carrito">Registrarse</a>
+                            <button data-product={{product.id}} data-action="add" class ="btn btn-outline-secondary add-btn update-cart" >Agregar al carrito</button>
+                          
                            
-                            
+                          
                         </div>
                       
                        
