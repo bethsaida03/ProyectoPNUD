@@ -13,10 +13,7 @@ urlpatterns = [
     path('iniciosesion', views.iniciosesion, name='iniciosesion'),
     path('piedepagina', views.piedepagina, name='piedepagina'),
     path('producto', views.producto, name='producto'),
-    path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
-    path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
-    path('restar/<int:producto_id>/', restar_producto, name="Dub"),
-    path('limpiar/', limpiar_carrito, name="CLS"), 
+    path('update_item', views.updateItem, name="update_item")
     
 ]
 
