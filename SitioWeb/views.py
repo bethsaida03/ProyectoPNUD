@@ -28,14 +28,16 @@ def Home(request):
 
 def carrito(request):
     if request.user.is_authenticated:
-        usuario = request.user.usuario
-        orden, created =Orden.objects.get_or_create(usuario=usuario)
-        items = orden.ordenitem_set.all()
+        customer = request.user.customer
+        order, created =Order.objects.get_or_create( customer= customer)
+        items = order.orderitem_set.all()
+       
     else:
         items = []
-        orden = {'get_cart_total':0, 'get_cartitems':0 }
+        order = {'get_cart_total':0, 'get_cartitems':0 }
+      
 
-    context={'items': items, 'orden':orden}
+    context={'items': items, 'order':order}
     return render(request, 'SitioWeb/carrito.html', context)
 
 #--------------------------REGISTRO---------------------#
