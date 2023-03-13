@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm,  UserChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
+from django.http import JsonResponse,  HttpResponse
+import json
 from .forms import(
         LoginForm, 
         UserForm,   
@@ -100,28 +102,51 @@ def piedepagina(request):
 
 
 def producto(request):
-    productos = Producto.objects.all()
-    return render(request, 'SitioWeb/producto1.html', {'productos':productos})
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created =Order.objects.get_or_create( customer= customer)
+        items = order.orderitem_set.all()
+        cartItems = order.get_cart_items
+       
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cartitems':0 }
+        cartItems = order['get_cart_items']
+      
 
-def agregar_producto (request, producto_id):
-    carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.agregar(producto)
-    return redirect('producto')
+     
+    products = Product.objects.all()
+    context = {'products': products, ' cartItems':  cartItems, 'order':order}
+    return render(request, 'SitioWeb/producto1.html', context )
 
-def eliminar_producto(request, producto_id):
-    carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.eliminar(producto)
-    return redirect('producto')
 
-def restar_producto(request, producto_id):
-    carrito = Carrito(request)
-    producto = Producto.objects.get(id=producto_id)
-    carrito.restar(producto)
-    return redirect('producto')
 
 def limpiar_carrito(request, producto_id):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect('producto')
+
+def updateItem(request):
+    data = json.loads(request.body)
+    productId = data['productId']
+    action = data['action']
+
+    print('Action:', action)
+    print('productId:', productId)
+
+    customer = request.user.customer
+    product = Product.objects.get(id=productId)
+    order, created =Order.objects.get_or_create(customer=customer)
+
+    orderItem, created =OrderItem.objects.get_or_create(order= order, product=product)
+
+    if action == 'add':
+        orderItem.quantity = (orderItem.quantity +1)
+    elif action == 'remove':
+        orderItem.quantity = (orderItem.quantity -1)
+
+    orderItem.save()
+    if orderItem.quantity <= 0:
+        orderItem.delete()
+
+    return JsonResponse('Item was added', safe=False)
