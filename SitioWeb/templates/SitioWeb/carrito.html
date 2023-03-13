@@ -146,13 +146,17 @@
             {% for item in items   %}
            
             <tr>
-                <td> <img src="{{ item.producto.imagen.url}}"></td>
-                <td>{{item.producto.nombre}}</td>
-                <td>${{item.producto.valor|floatformat:2}}</td>
-                <td>{{item.cantidad}}</td>
-
+                <td> <img src="{{item.product.imageURL}}"></td>
+                <td>{{item.product.name}}</td>
+                <td>${{item.product.price|floatformat:2}}</td>
+                <td>{{item.quantity}}</td>
+                <div class="quantity">
+                    <img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="">
+            
+                    <img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="">
+                </div>        
                 <td>${{item.get_total}}</td>
-                <td><button class="BtnEliminar">Eliminar</button></td>
+                <td><a  style="float:right; margin:10px;" class="btn btn-danger" href="">Eliminar</a></td>
             </tr>
            
             
