@@ -140,12 +140,14 @@ def updateItem(request):
     orderItem, created =OrderItem.objects.get_or_create(order= order, product=product)
 
     if action == 'add':
-        orderItem.quantity = (orderItem.quantity +1)
+        orderItem.quantity = (orderItem.quantity + 1)
     elif action == 'remove':
-        orderItem.quantity = (orderItem.quantity -1)
+        orderItem.quantity = (orderItem.quantity - 1)
 
     orderItem.save()
     if orderItem.quantity <= 0:
         orderItem.delete()
 
     return JsonResponse('Item was added', safe=False)
+
+
