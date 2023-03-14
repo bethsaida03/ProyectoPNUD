@@ -129,45 +129,49 @@
     <h2>Lista de productos</h2>
 </div>
 
+
+
+
+
 <div class="contenedortabla">
+
    
-    <table class="table" style="border: 1px solid #80808066;">
-        <thead>
-            <tr>
-                <th scope="col">Imagen</th>
-                <th scope="col">Producto</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Total</th>
-                <th scope="col">Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in items   %}
-           
-            <tr>
-                <td> <img src="{{item.product.imageURL}}"></td>
-                <td>{{item.product.name}}</td>
-                <td>${{item.product.price|floatformat:2}}</td>
-                <td>{{item.quantity}}</td>
-                <div class="quantity">
-                    <img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="">
-            
-                    <img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="">
-                </div>        
-                <td>${{item.get_total}}</td>
-                <td><a  style="float:right; margin:10px;" class="btn btn-danger" href="">Eliminar</a></td>
-            </tr>
-           
-            
-            {% endfor %}
-        </tbody>
-    </table>
+   
+    <div class="box-element">
+        <div class="cart-row">
+             <div style="flex:2"></div>
+             <div style="flex:2"><strong>Item</strong></div>
+             <div style="flex:1"><strong>Precio</strong></div>
+             <div style="flex:1"><strong>Cantidad</strong></div>
+             <div style="flex:1"><strong>Total</strong></div>
+             <div style="flex:1"><strong>Accion</strong></div>
+        </div>
+        {% for item in items %}
+        <div class="cart-row">
+             <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+             <div style="flex:2"><p>{{item.product.name}}</p></div>
+             <div style="flex:1"><p>{{item.product.price|floatformat:2}}</p></div>
+             <div style="flex:1">
+                  <p class="quantity">{{item.quantity}}</p>
+                  <div class="quantity">
+                    <img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="{% static  'img/arrow-up.png' %}">
+                    
+                    <img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="{% static  'img/arrow-down.png' %}">
+                 </div>
+             </div>
+             <div style="flex:1"><p>${{item.get_total}}</p></div>
+
+
+        </div>
+        {% endfor %}
+</div>
  
 </div>
 
+
+
 <div class="add-products">
-    <button class="BtnProductos" (click)="producto">Elegir más productos</button>
+    <a  class="btn btn-outline-dark" href="{% url 'producto' %}">&#x2190; Continue Comprando</a>
 </div>
 
 <div class="ContenedorPosterior">
@@ -187,17 +191,18 @@
         <tbody>
             <tr>
                 <td>Cantidad de productos</td>
-                <td>{{orden.get_cart_items}}</td>
+                <td>{{order.get_cart_items}}</td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td>{{orden.get_cart_total}}</td>
+                <td>${{order.get_cart_total}}</td>
             </tr>
-            
+           
         </tbody>
     </table>
 
 </div>
-<button type="button" class="BtnCompra" (click)="ContinuarC()" style="margin-bottom: 5%;">Continuar Compra</button>
+<button type="button" class="BtnCompra"style="margin-bottom: 5%;">Continuar Compra</button>
+<a  style="float:right; margin:10px;" class="btn btn-primary" href="">Checkout</a>
 </div>
 {% include "./piedepagina.html" %}
