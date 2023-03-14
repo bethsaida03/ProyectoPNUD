@@ -1,0 +1,85 @@
+{% include "./header.html" %}
+
+<h2 class="titulo-principal-carrito">Carrito de compras</h2>
+
+<div class="titulo-secundario-carrito">
+    <h2>Lista de productos</h2>
+</div>
+
+
+
+
+
+<div class="contenedortabla">
+
+   
+   
+    <div class="box-element">
+        <div class="cart-row">
+             <div style="flex:2"></div>
+             <div style="flex:2"><strong>Item</strong></div>
+             <div style="flex:1"><strong>Precio</strong></div>
+             <div style="flex:1"><strong>Cantidad</strong></div>
+             <div style="flex:1"><strong>Total</strong></div>
+             <div style="flex:1"><strong>Accion</strong></div>
+        </div>
+        {% for item in items %}
+        <div class="cart-row">
+             <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+             <div style="flex:2"><p>{{item.product.name}}</p></div>
+             <div style="flex:1"><p>{{item.product.price|floatformat:2}}</p></div>
+             <div style="flex:1">
+                  <p class="quantity">{{item.quantity}}</p>
+                  <div class="quantity">
+                    <img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="{% static  'img/arrow-up.png' %}">
+                    
+                    <img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="{% static  'img/arrow-down.png' %}">
+                 </div>
+             </div>
+             <div style="flex:1"><p>${{item.get_total}}</p></div>
+
+
+        </div>
+        {% endfor %}
+</div>
+ 
+</div>
+
+
+
+<div class="add-products">
+    <a  class="btn btn-outline-dark" href="{% url 'producto' %}">&#x2190; Continue Comprando</a>
+</div>
+
+<div class="ContenedorPosterior">
+    <div class="caja">
+        <h2>Seguridad para sus pagos</h2>
+        <p>El cifrado garantiza una mayor seguridad en las transacciones.
+            La tecnología SSL protege los datos vinculados a información personal y de pago.</p>
+
+    </div>
+    <table class="table" style="width: 65%;margin-left: 35%;">
+        <thead>
+            <tr>
+                <th scope="col">Total del carrito</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cantidad de productos</td>
+                <td>{{order.get_cart_items}}</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>${{order.get_cart_total}}</td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+</div>
+<button type="button" class="BtnCompra"style="margin-bottom: 5%;">Continuar Compra</button>
+<a  style="float:right; margin:10px;" class="btn btn-primary" href="">Checkout</a>
+</div>
+{% include "./piedepagina.html" %}
