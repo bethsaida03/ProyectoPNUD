@@ -9,7 +9,7 @@ class Customer(models.Model):
     name = models.CharField(max_length=200, null=True)
     email= models.CharField(max_length=200, null=True)
 
-    def _str_(self) :
+    def __str__(self) :
         return self.name
     
 
@@ -24,7 +24,7 @@ class Product(models.Model):
        
         verbose_name_plural = "Producto"
 
-    def _str_(self):
+    def __str__(self):
         return f' {self.name}'
 
     @property
@@ -41,7 +41,7 @@ class Order (models.Model):
     date_orderd = models.DateTimeField(auto_now_add=True)
 
 
-    def _str_(self):
+    def __str__(self):
         return str(self.id)
     
     @property
@@ -68,5 +68,6 @@ class OrderItem (models.Model):
     
     
 # Create your models here.
+
     
     
