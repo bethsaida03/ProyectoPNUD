@@ -13,7 +13,7 @@ urlpatterns = [
     path('iniciosesion', views.iniciosesion, name='iniciosesion'),
     path('piedepagina', views.piedepagina, name='piedepagina'),
     path('producto', views.producto, name='producto'),
-    path('update_item/', views.updateItem, name="update_item")
+    path('update_item', views.updateItem, name="update_item")
     
 ]
 
