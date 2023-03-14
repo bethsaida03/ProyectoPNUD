@@ -111,14 +111,13 @@ def producto(request):
     else:
         items = []
         order = {'get_cart_total':0, 'get_cartitems':0 }
-        cartItems = order['get_cart_items']
+        
       
 
      
     products = Product.objects.all()
-    context = {'products': products, ' cartItems':  cartItems, 'order':order}
+    context = {'products': products,  'order':order}
     return render(request, 'SitioWeb/producto1.html', context )
-
 
 
 def limpiar_carrito(request, producto_id):
