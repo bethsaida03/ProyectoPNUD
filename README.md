@@ -17,3 +17,5 @@ https://trello.com/invite/b/KKtASwKP/ATTIf9b3f831d1beb7f5a9919f5219b1b64dF624BFC
 Link de la documentación:
 https://1drv.ms/b/s!ApIVNNMlrHuYph4pNAq3ItuA6nZA?e=v7gZIG
 
+Link diapositiva:
+https://www.canva.com/design/DAFc7FrXLwk/SHXIXi4qtF1AXLF6PYPtiQ/edit?utm_content=DAFc7FrXLwk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
